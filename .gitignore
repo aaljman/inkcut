@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+*_cut.png
+*_plain.png
+*_mask.png
+*_preview.png
+!examples/**

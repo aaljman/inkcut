@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inkcut"
+version = "0.1.0"
+description = "Background removal for drawings, scans and photos on flat backgrounds, without the white fringe."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "aaljman" }]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "scipy",
+    "pillow",
+    "torch",
+    "torchvision",
+    "safetensors",
+    "huggingface_hub",
+    "transformers",
+    "timm",
+    "kornia",
+    "einops",
+]
+keywords = ["background removal", "alpha matting", "cutout", "line art", "illustration", "BiRefNet"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics",
+]
+
+[project.scripts]
+inkcut = "inkcut.cli:main"
+
+[tool.setuptools]
+packages = ["inkcut"]
